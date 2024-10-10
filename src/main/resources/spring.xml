@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<!--    <bean id="alien" class="com.spring.Alien" scope="prototype">-->
+<!--    </bean>-->
+
+    <bean id="alien" class="com.spring.Alien" autowire="byName">
+
+<!--        THis is for Setter Injection-->
+<!--        <property name="age" value="22" ></property>-->
+<!--        <property name="lap" ref="lap1"></property>-->
+
+<!--        THis is for Constructor Injection-->
+<constructor-arg value="21"/>
+    </bean>
+
+
+    <bean id="lap" class="com.spring.Laptop">
+    </bean>
+
+</beans>
+
+
